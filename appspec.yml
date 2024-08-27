@@ -5,19 +5,19 @@ files:
     destination: /tmp/
 hooks:
   # BeforeInstall:
-  #   - location: scripts/install_dependencies.sh
+  #   - location: script/install_dependencies.sh
   #     timeout: 300
   #     runas: root
   AfterInstall:
-    - location: /tmp/scripts/create_vhost.sh
+    - location: script/create_vhost.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /tmp/scripts/active_vhost.sh
+    - location: /script/active_vhost.sh
     # - location: scripts/create_test_db.sh
       timeout: 300
       runas: root
   # ApplicationStop:
-  #   - location: scripts/stop_server.sh
+  #   - location: script/stop_server.sh
   #     timeout: 300
   #     runas: root
