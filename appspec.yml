@@ -9,11 +9,11 @@ hooks:
   #     timeout: 300
   #     runas: root
   AfterInstall:
-    - location: scripts/create_vhost.sh
+    - location: /tmp/scripts/create_vhost.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/active_vhost.sh
+    - location: /tmp/scripts/active_vhost.sh
     # - location: scripts/create_test_db.sh
       timeout: 300
       runas: root
