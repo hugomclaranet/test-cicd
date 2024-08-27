@@ -13,8 +13,11 @@ hooks:
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /script/active_vhost.sh
-    # - location: scripts/create_test_db.sh
+    - location: scripts/active_vhost.sh
+      timeout: 300
+      runas: root
+  BeforeAllowTraffic:
+    - location: scripts/after_active.sh
       timeout: 300
       runas: root
   # ApplicationStop:
