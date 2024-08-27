@@ -12,8 +12,11 @@ hooks:
     - location: scripts/create_vhost.sh
       timeout: 300
       runas: root
-  ApplicationStart:
+  Install:
     - location: scripts/active_vhost.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
     - location: scripts/after_active.sh
       timeout: 300
       runas: root
