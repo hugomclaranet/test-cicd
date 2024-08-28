@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /tmp/test
+    destination: /tmp/codedeploy_vhost
 hooks:
   # BeforeInstall:
   #   - location: script/install_dependencies.sh
